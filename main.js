@@ -1,5 +1,6 @@
 const { app, BrowserWindow, Menu } = require('electron');
 const { ipcMain } = require('electron/main');
+const Calculator = require('./Calculator');
 // Set environment
 process.env.NODE_ENV = 'development';
 process.env.NODE_ENV = 'production';
@@ -73,3 +74,15 @@ app.on('activate', () => {
 });
 
 app.allowRendererProcessReuse = true;
+
+ipcMain.on('send:data', (e, args) => {
+   const { days, units } = JSON.parse(args);
+   const calculator = new Calculator(days, units);
+   mainWindow.webContents.send(
+      'send:calculations',
+      JSON.stringify({
+         beforeVAT: calculator.beforeVAT,
+         afterVAT: calculator.afterVAT,
+      })
+   );
+});
