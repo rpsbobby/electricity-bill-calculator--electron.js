@@ -29,7 +29,7 @@ function createMainWindow() {
    }
 
    // add file path
-   mainWindow.loadFile('');
+   mainWindow.loadFile('./public/index.html');
 }
 
 app.on('ready', () => {
