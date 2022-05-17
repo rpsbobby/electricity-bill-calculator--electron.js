@@ -1,9 +1,57 @@
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Electricity Bill Calculator</title>
-    </head>
-    <body>
 
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>Electricity Bill Calculator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="" />
+</head>
+
+<body class="">
+    <div class="d-flex-column">
+
+        <!-- NAV -->
+        <nav class="container-fluid text-center">
+            <h1>Calculate Electricity Bill</h1>
+        </nav>
+
+        <!-- FORM -->
+        <div class="pt-3 container-fluid">
+            <form id="form">
+                <div class=" py-3 px-5">
+
+                    <div class="d-flex p-2  justify-content-evenly">
+                        <div class="">
+                            <label for="numberOfUnits" class="form-label text-center h4">Units</label>
+                        </div>
+                        <div class="">
+                            <input type="text" id="units" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="d-flex p-2  justify-content-evenly">
+
+                        <div class="">
+                            <label for="numberOfDays" class="form-label text-center h4">Days</label>
+                        </div>
+                        <div class="">
+                            <input type="text" id="days" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <span>
+                            <!-- include error message-->
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary m-3">
+                            Calculate
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
 </html>
