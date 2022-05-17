@@ -36,5 +36,17 @@ form.addEventListener('submit', (e) => {
     afterField.innerHTML = `€${after.toFixed(2)}`;
  };
  
+ const validateInput = () => {
+    let flag = true;
+    const valueDays = days.value;
+    const valueUnits = units.value;
+    if (isNaN(valueDays) || Number(valueDays) < 0) {
+       flag = false;
+    }
+    if (isNaN(valueUnits) || Number(valueUnits) < 0) {
+       flag = false;
+    }
  
+    return flag;
+ };
 
