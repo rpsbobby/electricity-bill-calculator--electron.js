@@ -26,5 +26,15 @@ form.addEventListener('submit', (e) => {
     updateFields(beforeVAT, afterVAT);
  });
 
-
+ const clearFields = () => {
+    units.value = '';
+    days.value = '';
+ };
+ 
+ const updateFields = (before, after) => {
+    beforeField.innerHTML = `€${before.toFixed(2)}`;
+    afterField.innerHTML = `€${after.toFixed(2)}`;
+ };
+ 
+ 
 
