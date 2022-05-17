@@ -10,7 +10,7 @@ class Calculator {
    }
 
    calculateAfterVAT() {
-      return 0;
+      return this.beforeVAT + Math.round(this.beforeVAT * this.vat * 100) / 100;
    }
 
    calculateBeforeVAT() {
