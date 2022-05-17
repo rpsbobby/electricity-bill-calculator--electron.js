@@ -4,6 +4,7 @@ const units = document.getElementById('units');
 const days = document.getElementById('days');
 const beforeField = document.getElementById('beforeVAT');
 const afterField = document.getElementById('afterVAT');
+const errorField = document.getElementById('errorMessage');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -48,5 +49,16 @@ form.addEventListener('submit', (e) => {
     }
  
     return flag;
+ };
+
+ const displayError = () => {
+    errorField.innerHTML = 'The Input Has to Be a Positive Number or 0';
+    units.classList.add('border', 'border-danger');
+    days.classList.add('border', 'border-danger');
+    setTimeout(() => {
+       errorField.innerHTML = '';
+       units.classList.remove('border', 'border-danger');
+       days.classList.remove('border', 'border-danger');
+    }, 2000);
  };
 
