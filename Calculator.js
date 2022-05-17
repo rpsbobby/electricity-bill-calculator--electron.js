@@ -6,7 +6,11 @@ class Calculator {
       this.vat = 0.135;
       this.standingCharges = 0.04;
       this.beforeVAT = this.calculateBeforeVAT();
-      this.afterVAT;
+      this.afterVAT = this.calculateAfterVAT();
+   }
+
+   calculateAfterVAT() {
+      return 0;
    }
 
    calculateBeforeVAT() {
