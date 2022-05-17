@@ -2,6 +2,8 @@ const { ipcRenderer } = require('electron');
 const form = document.getElementById('form');
 const units = document.getElementById('units');
 const days = document.getElementById('days');
+const beforeField = document.getElementById('beforeVAT');
+const afterField = document.getElementById('afterVAT');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -18,4 +20,11 @@ form.addEventListener('submit', (e) => {
     // clear input fields
     clearFields();
  });
+
+ ipcRenderer.on('send:calculations', (e, args) => {
+    const { beforeVAT, afterVAT } = JSON.parse(args);
+    updateFields(beforeVAT, afterVAT);
+ });
+
+
 
