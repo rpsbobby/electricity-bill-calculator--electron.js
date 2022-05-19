@@ -4,6 +4,9 @@
 
 # To build run:
 
-npm run package-win (for Windows)
-npm run package-mac (for MacOS)
-npm run package-linux (for Linux)
+<ul>
+  <li>npm run package-win (for Windows)</li>
+  <li>npm run package-mac (for MacOS)</li>
+  <li>npm run package-linux (for Linux)</li>
+</ul>
+   
