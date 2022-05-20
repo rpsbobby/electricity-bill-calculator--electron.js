@@ -2,7 +2,7 @@ const { app, BrowserWindow, Menu } = require('electron');
 const { ipcMain } = require('electron/main');
 const Calculator = require('./Calculator');
 // Set environment
-// process.env.NODE_ENV = 'development';
+//process.env.NODE_ENV = 'development';
 process.env.NODE_ENV = 'production';
 
 const isDev = process.env.NODE_ENV !== 'production' ? true : false;
